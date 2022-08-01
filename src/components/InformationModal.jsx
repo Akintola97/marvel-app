@@ -13,9 +13,9 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: "90%",
-  height: "90%",
-  bgcolor: 'background.paper',
+  width: "70%",
+  height: "50%",
+  bgcolor: 'black',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -49,7 +49,7 @@ export default function InformationModal({children, id, thumbnail, title, descri
       >
         <Fade in={open}>
           <Box sx={style}>
-              <div className='w-full h-full overflow-y-auto'>
+              <div className='w-full h-full overflow-y-auto text-white'>
               <div>
                 <h1 className='font-bold'>Title</h1>
                 <p className='text-center p-3 uppercase'>{title}</p>
@@ -59,7 +59,7 @@ export default function InformationModal({children, id, thumbnail, title, descri
                <p className='text-left p-3'>{description}</p> 
                </div>
                <div>
-                 <h1 className='font-bold pt-3'>Comic Series</h1>
+                 <h1 className='font-bold pt-8'>Comic Series</h1>
                  <p className='text-center p-3'>{/* <li>{comics}</li> */}</p>
                </div>
                

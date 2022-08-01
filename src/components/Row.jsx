@@ -27,7 +27,7 @@ const Row = ({ element, title }) => {
           ))}
       
       </div>
-      <div className="mt-10">
+      <div className="mt-10 pr-5">
      <h1 className="text-white text-right">{element.copyright}</h1>  
      </div>
     </div>
