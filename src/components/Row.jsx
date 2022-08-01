@@ -4,12 +4,12 @@ import Information from "./Information";
 const imageSize = "portrait_uncanny";
 
 const Row = ({ element, title }) => {
-  console.log(element.copyright)
+ 
   return (
-    <div>
+    <div className="w-full h-full">
       {/* <h1 className='p-3 h-full w-full text-center mt-4 font-bold text-[3vmin]'>{title}</h1> */}
 
-      <div className="flex flex-wrap justify-center w-full">
+      <div className="flex flex-wrap justify-center w-full h-full">
         {element.data &&
           element.data.results.map((x) => (
          
@@ -19,17 +19,17 @@ const Row = ({ element, title }) => {
               thumbnail={`${x.thumbnail.path}/${imageSize}.${x.thumbnail.extension}`}
               title={x.name}
               description = {x.description}
-              comics = {x.series.name}
+              // comics = {x.stories.items.name}
               copyright = {element.attributionText}
 
             />
-           
+            
           ))}
-          
+      
       </div>
-      <div className="">
-      <h1>{element.copyright}</h1>  
-      </div>
+      <div className="mt-10">
+     <h1>{element.copyright}</h1>  
+     </div>
     </div>
     
   ); 

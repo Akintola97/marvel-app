@@ -4,7 +4,9 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+
+
+
 
 const style = {
   position: 'absolute',
@@ -25,6 +27,10 @@ export default function InformationModal({children, id, thumbnail, title, descri
   const handleClose = () => setOpen(false);
 
 
+
+
+
+
   return (
     <div>
       <Button onClick={handleOpen}>
@@ -43,14 +49,25 @@ export default function InformationModal({children, id, thumbnail, title, descri
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              <h1 className='text-center'>{title}</h1>
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-               <h1 className='font-bold'>{description}</h1> 
-               <h1>{copyright}</h1>
+              <div className='w-full h-full'>
+              <div>
+                <h1 className='font-bold'>Title</h1>
+                <p className='text-center p-3'>{title}</p>
+              </div>
+              <div>
+               <h1 className='font-bold pt-4'>Description</h1> 
+               <p className='text-left p-4'>{description}</p> 
+               </div>
+               <div>
+                 <h1 className='font-bold pt-4'>Comic Series</h1>
+                 <p className='text-center p-4'>{/* <li>{comics}</li> */}</p>
+               </div>
                
-            </Typography>
+              <div className='fixed text-center inset-x-0 bottom-0'>
+               <h1>{copyright}</h1>
+               </div>
+               </div>
+           
           </Box>
         </Fade>
       </Modal>
