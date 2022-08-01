@@ -7,6 +7,9 @@ const Information = ({id, thumbnail, title}) => {
     } else 
     return str;
 } 
+
+
+
   return (
     <div>
     <img className='w-[40vmin] p-5' src = {thumbnail} />
