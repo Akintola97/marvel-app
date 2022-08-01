@@ -39,11 +39,10 @@ const Home = (event) => {
   
  //console.log(searchData.data && searchData.data.results)
 
-
   return (
     <>
     <div className='flex justify-center pt-5'>
-    <input value={character} onKeyPress={Marvel} onChange={e => setcharacter(e.target.value)} className='border p-2' type = 'text' placeholder='Character...'>
+    <input value={character} onKeyPress={Marvel} onChange={e => setcharacter(e.target.value)} className='border p-2 uppercase' type = 'text' placeholder='Character...'>
     </input>
     <div className=''>
         <button onClick={Marvel} className='bg-green-400 p-3 text-lg'><AiOutlineSearch />
