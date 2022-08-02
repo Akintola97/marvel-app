@@ -17,15 +17,16 @@ const Row = ({ element, title }) => {
               key={x.id}
               id={x.id}
               thumbnail={`${x.thumbnail.path}/${imageSize}.${x.thumbnail.extension}`}
-              title={x.name}
+              title={x.name} 
               description = {x.description}
-              // comics = {x.stories.items.name}
+              comics = {x.series.items.name}
               copyright = {element.attributionText}
 
             />
-            
+         
           ))}
-      
+          
+    
       </div>
       <div className="mt-10 pr-5">
      <h1 className="text-white text-right">{element.copyright}</h1>  
@@ -33,7 +34,7 @@ const Row = ({ element, title }) => {
     </div>
     
   ); 
-  
+
 };
 
 export default Row;

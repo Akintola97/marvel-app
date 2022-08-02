@@ -11,7 +11,7 @@ const Information = ({id, thumbnail, title, description, comics, copyright}) => 
     return str;
 } 
 
-  
+
 
 
 

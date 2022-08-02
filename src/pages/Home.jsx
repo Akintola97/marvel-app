@@ -36,9 +36,8 @@ const Home = (event) => {
         
         }
   
-    
-  
- //console.log(searchData.data && searchData.data.results)
+      
+
 
   return (
     <>
