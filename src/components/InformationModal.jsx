@@ -11,7 +11,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "70%",
-  height: "55%",
+  height: "65%",
   bgcolor: "black",
   border: "2px solid #000",
   boxShadow: 24,
@@ -63,7 +63,7 @@ export default function InformationModal({
               </div>
               <div>
                 <h1 className="font-bold pt-8">Comic Series</h1>
-                <ul className="text-center p-3">
+                <ul className="text-center p-3 pb-10">
                   {comics.length === 0 ? 'No comics found' : comics &&
                     comics.map((i) => {
                     return <li className="uppercase">{i.name}</li>
