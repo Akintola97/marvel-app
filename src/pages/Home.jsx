@@ -29,14 +29,16 @@ const Home = (event) => {
         })
         .then((
             data) => {
+       // console.log(data)
         setSearchData(data)
+
          })
          .catch((error) =>
          console.log(error))
         
         }
   
-      
+       
 
 
   return (

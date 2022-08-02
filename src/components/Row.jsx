@@ -4,6 +4,13 @@ import Information from "./Information";
 const imageSize = "portrait_uncanny";
 
 const Row = ({ element, title }) => {
+
+  if(element.data && element.data.results && element.data.results.length === 0){
+   //alert ("That Character cannot be found") 
+   return <h1 className="text-white text-center flex flex-row min-h-[100vh] justify-center items-center">That Character cannot be found</h1> 
+     } else {
+     
+
  
   return (
     <div className="w-full h-full">
@@ -16,15 +23,15 @@ const Row = ({ element, title }) => {
             <Information
               key={x.id}
               id={x.id}
-              thumbnail={`${x.thumbnail.path}/${imageSize}.${x.thumbnail.extension}`}
+              thumbnail={`${x.thumbnail.path}/${imageSize}.${x.thumbnail.extension}`} 
               title={x.name} 
               description = {x.description}
-              comics = {x.series.items.name}
+              comics = {x.series.items}
               copyright = {element.attributionText}
 
             />
-         
-          ))}
+          
+        ))}
           
     
       </div>
@@ -34,7 +41,7 @@ const Row = ({ element, title }) => {
     </div>
     
   ); 
-
+          }
 };
 
 export default Row;
