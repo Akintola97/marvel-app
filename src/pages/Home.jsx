@@ -20,7 +20,7 @@ const Home = (event) => {
     const privateKey = 'cccf1d05ada0dc91ded608179b0e39ba919f3b13'
     const hash = getHash(ts, privateKey, apiKey)
     
-   const fetchURL = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${character}`
+   const fetchURL = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${character}`
 
   const Marvel = (event) =>{
         fetch(fetchURL)
